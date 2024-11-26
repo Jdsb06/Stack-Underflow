@@ -1,8 +1,9 @@
-CREATE DATABASE StackUnderflow; --command 1
-
-USE StackUnderflow;   --command 2
-
-create table Master                                --command 3
+--command 1
+CREATE DATABASE StackUnderflow; 
+--command 2
+USE StackUnderflow;   
+--command 3
+create table Master                                
 (
     item_id     int auto_increment
         primary key,
@@ -10,8 +11,8 @@ create table Master                                --command 3
     category    varchar(50)  null,
     description varchar(150) null
 );
-
-create table Customer_Order                        --command 4
+--command 4
+create table Customer_Order                        
 (
     cust_order_id   int auto_increment
         primary key,
@@ -23,8 +24,8 @@ create table Customer_Order                        --command 4
     constraint Customer_Order_Master_item_id_fk
         foreign key (item_id) references Master (item_id)
 );
-
-create table Purchase_Manufacture                  --command 5
+--command 5
+create table Purchase_Manufacture                  
 (
     purchase_id     int auto_increment
         primary key,
@@ -36,8 +37,8 @@ create table Purchase_Manufacture                  --command 5
     constraint Purchase_Manufacture_Master_item_id_fk
         foreign key (item_id) references Master (item_id)
 );
-
-create table Transaction                            --command 6
+--command 6
+create table Transaction                            
 (
     tran_id   int auto_increment
         primary key,
@@ -48,8 +49,8 @@ create table Transaction                            --command 6
     constraint Transaction_Master_item_id_fk
         foreign key (item_id) references Master (item_id)
 );
-
-create table User                                    --command 7
+--command 7
+create table User                                    
 (
     user_id   int auto_increment
         primary key,
