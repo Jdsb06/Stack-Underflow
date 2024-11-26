@@ -10,7 +10,11 @@
 
 MYSQL *conn;
 
+void refresh() {
+    system("clear");
+}
 void displayMenu() {
+    refresh();
     printf("\n--- Warehouse Management System ---\n");
     printf("1. Master Data Management\n");
     printf("2. Purchase Management\n");
@@ -42,18 +46,23 @@ int main() {
         scanf("%d", &choice);
         switch (choice) {
             case 1:
+                refresh();
                 manageItems(conn);
             break;
             case 2:
+                refresh();
                 manageOrders_p(conn);
             break;
             case 3:
+                refresh();
                 manageOrders_c(conn);
             break;
             case 4:
+                refresh();
                 manageTransactions(conn);
             break;
             case 5:
+                refresh();
                 viewStatistics(conn);
             break;
             case 6:
