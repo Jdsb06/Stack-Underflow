@@ -2,6 +2,10 @@
 #include <mysql/mysql.h>
 #include "order_p.h"
 
+static void refresh() {
+    system("clear");
+}
+
 void addPurchaseOrder(MYSQL *conn) {
     int item_id, quantity;
     printf("Enter Item ID for purchase: ");
@@ -90,22 +94,25 @@ void completePurchaseOrder(MYSQL *conn) {
 void manageOrders_p(MYSQL *conn) {
     int choice;
     do {
-        printf("\n--- Purchase Orders Management ---\n");
+        printf("\n\033[1;34m--- Purchase Orders Management ---\033[0m\n");
         printf("1. Add Purchase Order\n");
         printf("2. View Purchase Orders\n");
         printf("3. Complete Purchase Order\n");
-        printf("4. Return to Main Menu\n");
-        printf("Enter your choice: ");
+        printf("\033[31m4. Return to Main Menu\033[0m\n");
+        printf("\033[1;32mEnter your choice: \033[0m ");
         scanf("%d", &choice);
 
         switch (choice) {
             case 1:
+                refresh();
                 addPurchaseOrder(conn);
             break;
             case 2:
+                refresh();
                 viewPurchaseOrders(conn);
             break;
             case 3:
+                refresh();
                 completePurchaseOrder(conn);
             break;
             case 4:
