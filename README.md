@@ -70,20 +70,16 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
 
 ## **How to Run the Project**
 
-### **Prerequisites**
-1. Install MySQL:
+1. Download repository:
    ```bash
-   sudo apt install mysql-server
-2. Install required Python libraries:
-   ```bash
-   pip install mysql-connector-python matplotlib
-3. Compile the Project:
+   git clone https://github.com/Jdsb06/Stack-Underflow/
+2. Compile the Project:
    ```bash
    make
-4. Run the Project:
+3. Run the Project:
    ```bash
    ./wms
-5. Clean Build Files:
+4. Clean Build Files:
    ```bash
    make clean
 
