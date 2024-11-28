@@ -38,7 +38,7 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
 ### **Libraries Used**
 1. **MySQL Connector C Library** (`-lmysqlclient`)
 2. **Matplotlib (Python)**
-3. **Python MySQL Connector`
+3. **Python MySQL Connector**
 
 ---
 
@@ -82,5 +82,3 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
 4. Clean Build Files:
    ```bash
    make clean
-
-
