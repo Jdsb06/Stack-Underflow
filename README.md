@@ -1,55 +1,80 @@
-# Stack-Underflow
 # Warehouse Management System for Online Shopping
 
-The **Warehouse Management System (WMS)** is a software application designed to streamline and optimize warehouse operations for online shopping platforms. It ensures efficient management of inventory, labour, and order processing, facilitating seamless integration between warehouse activities and customer orders.
+## **Basic Definition**
+This Warehouse Management System (WMS) is designed for managing inventory, processing purchase and customer orders, and maintaining transaction history in an online shopping context. The system leverages a MySQL database for backend data management and provides functionality for order tracking, stock monitoring, and generating statistical insights.
 
-## Project Objectives
-- Create a robust and user-friendly menu-driven system using C programming.
-- Maintain data persistence through file handling for long-term storage and retrieval.
-- Implement a structured and modular database for managing inventory, orders, and labour.
-- Enhance operational efficiency by automating repetitive tasks and providing real-time insights.
+---
 
-## Core Features
-### 1. User Management
-- Login and registration system for admins and users.
-- Role-based access control for secure operations.
+## **Project Objectives**
+- **Efficient Inventory Management**: Track inventory in real time, manage stock levels, and process orders seamlessly.
+- **Order Handling**: Support for both purchase orders from suppliers and customer orders.
+- **Data Integrity**: Ensure proper handling of dependencies using MySQL constraints and logical checks.
+- **Comprehensive Statistics**: Generate insights into inventory trends, top-selling items, and transaction breakdowns.
 
-### 2. Inventory Management
-- Add, update, and delete item records.
-- View inventory details, including item categories, quantities, and pricing.
-- Track stock levels with statistics for effective decision-making.
+---
 
-### 3. Order Processing
-- Place and record customer orders.
-- Maintain order history with item and user details.
+## **Core Features**
+- **User Management**: Admin users can log in and manage the system securely.
+- **Inventory Management**:
+  - Add, update, and delete items.
+  - View current stock levels.
+- **Order Processing**:
+  - Manage purchase orders from suppliers.
+  - Manage customer orders.
+- **Transaction History**:
+  - Maintain and view transaction details for inventory changes.
+- **Statistics and Graphs**:
+  - Generate inventory trends, top-selling items, and transaction type graphs.
 
-### 4. Labour Management
-- Maintain a database of labour records, including roles, shifts, and contact details.
-- Track labour attendance and assign tasks.
-- Generate reports for attendance and task completion.
+---
 
-### 5. Statistics and Reporting
-- Provide insights into inventory usage and order trends.
-- Generate reports to analyze operational efficiency.
+## **Technical Details**
+### **Programming Languages**
+- **C**: Core logic and integration with MySQL database.
+- **Python**: For generating graphs and visualizations using Matplotlib.
 
-## Technical Details
-- **Programming Language:** C
-- **Database:** MySQL for relational data storage and management.
-- **Data Structures:** Use of structures and linked lists for efficient in-memory data management.
-- **File Handling:** Persistent storage using `.txt` files for backup and retrieval.
-- **Foreign Key Relations:** Ensure data consistency between tables for users, items, orders, and labour.
-- **Interface:** Command-line interface for menu-driven interactions.
+### **Database**
+- **MySQL**: Backend database for managing inventory, orders, and transactions.
 
-## Key Deliverables
-- A functional WMS program with at least 10 menu options.
-- Database schema with minimum tables linked through foreign keys.
-- Modular codebase with a Makefile for compilation.
-- README file with usage instructions and documentation.
+### **Libraries Used**
+1. **MySQL Connector C Library** (`-lmysqlclient`)
+2. **Matplotlib (Python)**
+3. **Python MySQL Connector`
 
-## How to Run the Program
-1. Clone the repository to your local machine.
-2. Compile the program using the provided `Makefile`:
+---
+
+## **Key Deliverables**
+1. **Functional Modules**:
+   - `master.c`: Inventory management.
+   - `user.c`: Admin login and user management.
+   - `order_c.c` and `order_p.c`: Customer and purchase order handling.
+   - `transaction.c`: Maintain transaction history.
+   - `statistics.c`: Generate statistical insights with graphs.
+2. **Python Scripts**:
+   - `generate_inventory_trends.py`
+   - `generate_top_selling.py`
+   - `generate_transactions_type.py`
+3. **Documentation**:
+   - SQL script for database schema.
+   - User guide for running the project.
+
+---
+
+## **Roles**
+- **BT2024154, BT2024217 (Kkshiteej Tiwari and Ridwan Umar)**:
+  - Modules: `master.c`, `user.c`
+- **BT2024186, BT2024098 (Aadyant Neog and Srijan Gupta)**:
+  - Modules: `order_c.c`, `order_p.c`
+- **BT2024128 (Soham Banerjee)**:
+  - Module: `transaction.c`
+- **IMT2024022 (Jashandeep Singh Bedi)**:
+  - Module: `statistics.c`
+
+---
+
+## **How to Run the Project**
+
+### **Prerequisites**
+1. Install MySQL:
    ```bash
-   make
-
-
+   sudo apt install mysql-server
