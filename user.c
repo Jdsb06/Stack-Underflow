@@ -1,16 +1,19 @@
 #include <stdio.h>
-#include <string.h>
 #include <mysql/mysql.h>
 #include "user.h"
+
+
+
 
 void userMenu(MYSQL *conn) {
     int choice;
     do {
-        printf("\n--- User Menu ---\n");
+        printf("\n\033[1;34m--- Warehouse Management System ---\033[0m\n");
+        printf("\n\033[1;34m---- User Menu ---\033[0m\n");
         printf("1. Sign In\n");
         printf("2. Sign Up\n");
-        printf("3. Exit\n");
-        printf("Enter your choice: ");
+        printf("\033[31m3. Exit\033[0m\n");
+        printf("\033[1;32mEnter your choice: \033[0m ");
         scanf("%d", &choice);
 
         switch (choice) {
@@ -18,8 +21,6 @@ void userMenu(MYSQL *conn) {
                 if (signIn(conn)) {
                     printf("Login successful!\n");
                     return; // Proceed to the main menu after successful login
-                } else {
-                    printf("Invalid credentials. Try again.\n");
                 }
                 break;
             case 2:
@@ -29,9 +30,9 @@ void userMenu(MYSQL *conn) {
                 printf("Exiting...\n");
                 mysql_close(conn);
                 exit(0);
-                break;
             default:
                 printf("Invalid choice. Please try again.\n");
+            break;
         }
     } while (1); // Keep showing the menu until user signs in or exits
 }
