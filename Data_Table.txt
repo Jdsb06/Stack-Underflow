@@ -1,0 +1,25 @@
+Master table data:
+
+INSERT INTO Master (name, category, description) VALUES
+('Smartphone', 'Electronics', 'Latest model with high-speed processor.'),
+('Laptop', 'Electronics', 'Ultra-slim laptop with long battery life.'),
+('Office Chair', 'Furniture', 'Ergonomic chair with lumbar support.'),
+('Desk Lamp', 'Home Decor', 'LED desk lamp with adjustable brightness.'),
+('Running Shoes', 'Footwear', 'Lightweight shoes for daily running.');
+
+
+Customer Table:
+
+INSERT INTO StackUnderflow.Customer_Order 
+(cust_order_id, item_id, quantity, status, order_date, completed_order) 
+VALUES
+(1, 1, 5, 'pending', '2024-11-28 23:07:14', null),
+(2, 2, 3, 'pending', '2024-11-28 23:07:26', null),
+(3, 4, 6, 'pending', '2024-11-28 23:07:41', null),
+(4, 5, 3, 'pending', '2024-11-28 23:08:07', null),
+(5, 3, 2, 'pending', '2024-11-28 23:09:47', null);
+
+
+User Table:
+
+INSERT INTO StackUnderflow.User (user_id, user_name, password) VALUES (1, 'admin', 'admin');
