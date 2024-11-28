@@ -69,17 +69,17 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
 ---
 
 ## **How to Run the Project**
-Create table in mysql (commands are given in rdbms_StackUnderflow.sql)
-Insert data in mysql (commands given in Data_Table.txt)
-1. Download repository:
+1. **Create table in mysql (commands are given in rdbms_StackUnderflow.sql)**
+2. **Insert data in mysql (commands given in Data_Table.txt)**
+3. Download repository:
    ```bash
    git clone https://github.com/Jdsb06/Stack-Underflow/
-2. Compile the Project:
+4. Compile the Project:
    ```bash
    make
-3. Run the Project:
+5. Run the Project:
    ```bash
    ./wms
-4. Clean Build Files:
+6. Clean Build Files:
    ```bash
    make clean
