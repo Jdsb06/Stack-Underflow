@@ -2,6 +2,10 @@
 #include <mysql/mysql.h>
 #include "order_c.h"
 
+
+static void refresh() {
+    system("clear");
+}
 void viewCustomerOrders(MYSQL *conn) {
     MYSQL_RES *res;
     MYSQL_ROW row;
@@ -72,18 +76,20 @@ void completeCustomerOrder(MYSQL *conn) {
 void manageOrders_c(MYSQL *conn) {
     int choice;
     do {
-        printf("\n--- Customer Orders Management ---\n");
+        printf("\n\033[1;34m--- Customer Orders Management ---\033[0m\n");
         printf("1. View Customer Orders\n");
         printf("2. Complete Customer Order\n");
-        printf("3. Return to Main Menu\n");
-        printf("Enter your choice: ");
+        printf("\033[31m3. Return to Main Menu\033[0m\n");
+        printf("\033[1;32mEnter your choice: \033[0m ");
         scanf("%d", &choice);
 
         switch (choice) {
             case 1:
+                refresh();
                 viewCustomerOrders(conn);
             break;
             case 2:
+                refresh();
                 completeCustomerOrder(conn);
             break;
             case 3:
