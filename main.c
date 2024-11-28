@@ -10,19 +10,19 @@
 
 MYSQL *conn;
 
-void refresh() {
+static void refresh() {
     system("clear");
 }
 void displayMenu() {
     refresh();
-    printf("\n--- Warehouse Management System ---\n");
+    printf("\n\033[1;34m--- Warehouse Management System ---\033[0m\n");
     printf("1. Master Data Management\n");
     printf("2. Purchase Management\n");
     printf("3. Customer Order Management\n");
     printf("4. Transactions Management\n");
     printf("5. Reports & Statistics\n");
-    printf("6. Exit\n");
-    printf("Enter your choice: ");
+    printf("\033[31m6. Exit\033[0m\n");
+    printf("\033[1;32mEnter your choice:\033[0m ");
 }
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
         exit(1);
     }
 
-    userMenu(conn); // Display sign-in/sign-up menu
+    userMenu(conn);
 
     int choice;
     do {
@@ -63,7 +63,7 @@ int main() {
             break;
             case 5:
                 refresh();
-                viewStatistics(conn);
+                manageStatistics(conn);
             break;
             case 6:
                 printf("Exiting...\n");
