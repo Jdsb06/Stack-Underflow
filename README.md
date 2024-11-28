@@ -1,6 +1,5 @@
 # Warehouse Management System for Online Shopping
 
-## **Basic Definition**
 This Warehouse Management System (WMS) is designed for managing inventory, processing purchase and customer orders, and maintaining transaction history in an online shopping context. The system leverages a MySQL database for backend data management and provides functionality for order tracking, stock monitoring, and generating statistical insights.
 
 ---
@@ -54,16 +53,13 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
    - `generate_inventory_trends.py`
    - `generate_top_selling.py`
    - `generate_transactions_type.py`
-3. **Documentation**:
-   - SQL script for database schema.
-   - User guide for running the project.
 
 ---
 
 ## **Roles**
-- **BT2024154, BT2024217 (Kkshiteej Tiwari and Ridwan Umar)**:
+- **BT2024154(Kkshiteej Tiwari) & BT2024217(Ridwan Umar)**:
   - Modules: `master.c`, `user.c`
-- **BT2024186, BT2024098 (Aadyant Neog and Srijan Gupta)**:
+- **BT2024186(Aadyant Neog) & BT2024098 (Srijan Gupta)**:
   - Modules: `order_c.c`, `order_p.c`
 - **BT2024128 (Soham Banerjee)**:
   - Module: `transaction.c`
@@ -78,3 +74,17 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
 1. Install MySQL:
    ```bash
    sudo apt install mysql-server
+2. Install required Python libraries:
+   ```bash
+   pip install mysql-connector-python matplotlib
+3. Compile the Project:
+   ```bash
+   make
+4. Run the Project:
+   ```bash
+   ./wms
+5. Clean Build Files:
+   ```bash
+   make clean
+
+
