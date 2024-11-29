@@ -54,17 +54,7 @@ This Warehouse Management System (WMS) is designed for managing inventory, proce
    - `generate_top_selling.py`
    - `generate_transactions_type.py`
 
----
 
-## **Roles**
-- **BT2024154(Kkshiteej Tiwari) & BT2024217(Ridwan Umar)**:
-  - Modules: `master.c`, `user.c`
-- **BT2024186(Aadyant Neog) & BT2024098 (Srijan Gupta)**:
-  - Modules: `order_c.c`, `order_p.c`
-- **BT2024128 (Soham Banerjee)**:
-  - Module: `transaction.c`
-- **IMT2024022 (Jashandeep Singh Bedi)**:
-  - Module: `statistics.c`
 
 ---
 
