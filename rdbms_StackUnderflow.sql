@@ -59,3 +59,15 @@ create table User
     constraint User_pk_2
         unique (user_name)
 );
+
+INSERT INTO Master (name, category, description) VALUES
+('Smartphone', 'Electronics', 'Latest model with high-speed processor.'),
+('Laptop', 'Electronics', 'Ultra-slim laptop with long battery life.'),
+('Office Chair', 'Furniture', 'Ergonomic chair with lumbar support.'),
+('Desk Lamp', 'Home Decor', 'LED desk lamp with adjustable brightness.'),
+('Running Shoes', 'Footwear', 'Lightweight shoes for daily running.'),
+('Backpack', 'Accessories', 'Waterproof and durable backpack.'),
+('Coffee Table', 'Furniture', 'Wooden coffee table with modern design.'),
+('Blender', 'Kitchen Appliances', 'High-speed blender with multiple jars.'),
+('Action Camera', 'Electronics', 'Compact action camera with 4K recording.'),
+('Air Purifier', 'Home Appliances', 'HEPA filter for improved air quality.');
